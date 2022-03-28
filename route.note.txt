@@ -1,0 +1,8 @@
+
+# SASS to CSS router
+
+sass sass/global.scss:./css/home.css
+
+# SASS to CSS WARCH router
+
+sass --watch sass/global.scss:./css/home.css
