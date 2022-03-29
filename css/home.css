@@ -324,8 +324,140 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#ProjectsBox div {
-  border: 1px solid red;
+#ProSide1 {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#ProSide1 .SideUp {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ProSide1 .SideDown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ProSide1 .img01 {
+  position: absolute;
+  width: 90%;
+  border-radius: 5px;
+  border: 2px solid #9900e0;
+  max-width: 630px;
+  filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.226));
+}
+#ProSide1 #ImageContent01 {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
+}
+#ProSide1 #ImageContent01 span {
+  position: relative;
+  font-family: arial;
+  font-size: 24px;
+  font-weight: bold;
+  color: #9900e0;
+}
+#ProSide1 #ImageContent01 span:nth-of-type(2) {
+  font-size: 19px;
+  color: black;
+  margin-top: 5px;
+}
+#ProSide1 #ImageContent01 p {
+  position: relative;
+  font-family: arial;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  border-left: 5px solid #9900e0;
+  padding-left: 10px;
+}
+
+#ProSide2 {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#ProSide2 .SideUp {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ProSide2 .SideDown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ProSide2 .img02 {
+  position: absolute;
+  width: 80%;
+  border-radius: 5px;
+  border: 2px solid #9900e0;
+  max-width: 450px;
+  filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.226));
+}
+#ProSide2 #ImageContent02 {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
+}
+#ProSide2 #ImageContent02 span {
+  position: relative;
+  font-family: arial;
+  font-size: 24px;
+  font-weight: bold;
+  color: #9900e0;
+}
+#ProSide2 #ImageContent02 span:nth-of-type(2) {
+  font-size: 19px;
+  color: black;
+  margin-top: 5px;
+}
+#ProSide2 #ImageContent02 p {
+  position: relative;
+  font-family: arial;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+#ProSide2 #ImageContent02 button {
+  position: relative;
+  font-family: arial;
+  font-size: 17px;
+  font-weight: initial;
+  color: white;
+  background: #9900e0;
+  width: 160px;
+  height: 40px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  margin: 0px;
+  border-radius: 3px;
+}
+#ProSide2 #ImageContent02 button:hover {
+  cursor: pointer;
+  background: #8800c7;
+}
+#ProSide2 #ImageContent02 button:active {
+  background: none;
+  border: 1px solid #9900e0;
+  color: #9900e0;
 }
 
 #MozartEfect {
@@ -416,12 +548,67 @@ header {
   right: 20px;
   bottom: 20px;
   width: 130px;
-  display: none;
 }
 .PoweredByLabel:hover {
   cursor: pointer;
 }
 
+#MenuButton {
+  position: absolute;
+  width: 20px;
+  right: 50px;
+  filter: invert(100);
+  display: none;
+}
+#MenuButton:hover {
+  cursor: pointer;
+}
+
+#MobileMenu {
+  position: fixed;
+  right: -220px;
+  top: 60px;
+  width: 200px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.76);
+  backdrop-filter: blur(25px);
+  z-index: 2000;
+  border-radius: 3px;
+  border: 1px solid #3a3a3a;
+  display: none;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
+  animation: MobMenu 0.4s linear both;
+}
+#MobileMenu a {
+  position: relative;
+  width: auto;
+  height: 30px;
+  background: none;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: initial;
+  color: white;
+  border: none;
+  border: none;
+  padding-bottom: 4px;
+  text-decoration: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 10px;
+}
+#MobileMenu a:active {
+  background: white;
+  color: black;
+}
+
+@keyframes MobMenu {
+  to {
+    right: 10px;
+  }
+}
 #SocialBox {
   position: relative;
   display: flex;
@@ -507,6 +694,24 @@ footer {
   #MobCopy {
     display: flex;
     bottom: -40px;
+  }
+}
+@media only screen and (max-width: 860px) {
+  #MenuButton {
+    display: flex;
+  }
+
+  #MenuBox {
+    display: none;
+  }
+
+  #Logo {
+    left: 50px;
+  }
+}
+@media only screen and (min-width: 860px) {
+  #MobileMenu {
+    display: none;
   }
 }
 

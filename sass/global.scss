@@ -314,7 +314,141 @@ header{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	div{
-		border: $debug-border;
+		//border: $debug-border;
+	}
+}
+#ProSide1{
+	position: relative;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	.SideUp{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.SideDown{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.img01{
+		position: absolute;
+		width: 90%;
+		border-radius: 5px;
+		border: 2px solid rgb(153, 0, 224);
+		max-width: 630px;
+		filter: drop-shadow( 1px 1px 5px rgba(0, 0, 0, 0.226));
+	}
+	#ImageContent01{
+		position: absolute;
+		width: 80%;
+		height: auto;
+		display: flex;
+		justify-content: flex-start;
+		align-items: left;
+		flex-direction: column;
+		span{
+			position: relative;
+			font-family: arial;
+			font-size: 24px;
+			font-weight: bold;
+			color: rgb(153, 0, 224);
+		}
+		span:nth-of-type(2){
+			font-size: 19px;
+			color: black;
+			margin-top: 5px;
+		}
+		p{
+			position: relative;
+			font-family: arial;
+			font-size: 25px;
+			font-weight: bold;
+			color: black;
+			border-left: 5px solid rgb(153, 0, 224);
+			padding-left: 10px;
+		}
+	}
+}
+#ProSide2{
+	position: relative;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	.SideUp{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.SideDown{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.img02{
+		position: absolute;
+		width: 80%;
+		border-radius: 5px;
+		border: 2px solid rgb(153, 0, 224);
+		max-width: 450px;
+		filter: drop-shadow( 1px 1px 5px rgba(0, 0, 0, 0.226));
+	}
+	#ImageContent02{
+		position: absolute;
+		width: 80%;
+		height: auto;
+		display: flex;
+		justify-content: flex-start;
+		align-items: left;
+		flex-direction: column;
+		span{
+			position: relative;
+			font-family: arial;
+			font-size: 24px;
+			font-weight: bold;
+			color: rgb(153, 0, 224);
+		}
+		span:nth-of-type(2){
+			font-size: 19px;
+			color: black;
+			margin-top: 5px;
+		}
+		p{
+			position: relative;
+			font-family: arial;
+			font-size: 25px;
+			font-weight: bold;
+			color: black;
+			margin-top: 5px;
+			margin-bottom: 10px;
+		}
+		button{
+			position: relative;
+			font-family: arial;
+			font-size: 17px;
+			font-weight: initial;
+			color: white;
+			background: rgb(153, 0, 224);
+			width: 160px;
+			height: 40px;
+			padding: 5px;
+			border: none;
+			outline: none;
+			margin: 0px;
+			border-radius: 3px;
+			&:hover{
+				cursor: pointer;
+				background: darken( rgb(153, 0, 224) , 5% );
+			}
+			&:active{
+				background: none;
+				border: 1px solid rgb(153, 0, 224);
+				color: rgb(153, 0, 224);
+			}
+		}
 	}
 }
 #MozartEfect{
@@ -401,12 +535,66 @@ header{
 	right: 20px;
 	bottom: 20px;
 	width: 130px;
-	display: none;
+	//display: none;
 	&:hover{
 		cursor: pointer;
 	}
 }
-
+#MenuButton{
+	position: absolute;
+	width: 20px;
+	right: 50px;
+	filter: invert(100);
+	display: none;
+	&:hover{
+		cursor: pointer;	
+	}
+	
+}
+#MobileMenu{
+	position: fixed;
+	right: -220px;
+	top: 60px;
+	width: 200px;
+	height: auto;
+	background: rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(25px);
+	z-index: 2000;
+	border-radius: 3px;
+	border: 1px solid rgb(58, 58, 58);
+	display: none;
+	justify-content: flex-start;
+	align-items: left;
+	flex-direction: column;
+	animation: MobMenu 0.4s linear both;
+	a{
+		position: relative;
+        width: auto;
+        height: 30px;
+        background: none;
+        font-family: arial;
+        font-size: 15px;
+        font-weight: initial;
+        color: white;
+        border: none;
+        border: none;
+        padding-bottom: 4px;
+        text-decoration: none;
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		padding-left: 10px;
+        &:active{
+			background: white;
+			color: black;
+        }
+	}
+}
+@keyframes MobMenu{
+	to{
+		right: 10px;
+	}
+}
 #SocialBox{
 	position: relative;
 	display: flex;
@@ -487,7 +675,7 @@ footer{
 }
 
 @media only screen and (max-width: 734px){
-  #SideCopy{
+  	#SideCopy{
 	   display: none;
 	}
 	footer{
@@ -500,3 +688,22 @@ footer{
 		bottom: -40px;
 	}
 }
+
+@media only screen and (max-width: 860px){
+	#MenuButton{
+		display: flex;
+	}
+	#MenuBox{
+		display: none;
+	}
+	#Logo{
+		left: 50px;
+	}
+}
+
+@media only screen and (min-width: 860px){
+	#MobileMenu{
+		display: none;
+	}
+}
+

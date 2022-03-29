@@ -18,7 +18,6 @@
 </head>
 <body>
 
-
     <!-- HEADER -->
 
     <header>
@@ -31,9 +30,22 @@
             <a class="hvr-underline-from-left" href="#">Forum</a>
             <a class="hvr-underline-from-left" href="#">Support</a>
         </div>
+        <img id="MenuButton" src="./assets/imgs/menu.svg">
     </header>
 
     <!-- HEADER END -->
+
+    <!-- MOBILE MENU -->
+
+    <div id="MobileMenu">
+        <a href="#">Home</a>
+        <a href="#">Product</a>
+        <a href="#">Blog</a>
+        <a href="#">Forum</a>
+        <a href="#">Support</a>
+    </div>
+
+    <!-- MOBILE MENU END -->
 
     <!-- MAIN CARROUSEL -->
 
@@ -151,10 +163,33 @@
 
     <div id="ProjectsBox">
         <div id="ProSide1">
-
+            <div class="SideUp">
+                <img class="img01" src="./assets/imgs/glass-img.gif">
+            </div>
+            <div class="SideDown">
+                <div id="ImageContent01">
+                    <span>Game developers</span>
+                    <span>Game Solutions Development.</span>
+                    <p>We develop Software to help in the development
+                        of games, Creation of assets for Professional Games.
+                    </p>
+                </div>
+            </div>
         </div>
         <div id="ProSide2">
-            
+            <div class="SideUp">
+                <div id="ImageContent02">
+                    <span>Game developers</span>
+                    <span>Game Solutions Development.</span>
+                    <p>We develop Software to help in the development
+                        of games, Creation of assets for Professional Games.
+                    </p>
+                    <button>Store</button>
+                </div>
+            </div>
+            <div class="SideDown">
+                <img class="img02" src="./assets/imgs/bird-glass-img.gif">
+            </div>
         </div>
     </div>
 
@@ -235,6 +270,7 @@
 
     <script src="./libs/Carrousel/Carrousel.js"></script>
     <script src="./libs/Carrousel/main.js"></script>
+    <script src="./scripts/global.js"></script>
 
     <!-- READ THREE -->
     
