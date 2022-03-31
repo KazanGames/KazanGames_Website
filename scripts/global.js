@@ -16,4 +16,4 @@ window.addEventListener('click', function(e){
     } else{
       MobileMenu.style.display = 'none';
     }
-  });
+});

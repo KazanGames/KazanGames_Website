@@ -77,15 +77,14 @@ header {
 }
 .SlideBox img {
   position: absolute;
-  height: 100%;
+  width: 100%;
   box-sizing: border-box;
   background: black;
-  opacity: 36%;
+  opacity: 50%;
 }
 
 #SlideContent {
   position: absolute;
-  left: 130px;
   width: auto;
   height: auto;
   display: flex;
@@ -93,13 +92,14 @@ header {
   align-items: left;
   flex-direction: column;
   z-index: 1000;
+  padding-left: 20px;
 }
 #SlideContent span {
   position: relative;
   font-family: arial;
   color: white;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 50px;
   margin: 0px;
   margin-bottom: 0px;
 }
@@ -108,9 +108,9 @@ header {
   font-family: arial;
   color: white;
   font-weight: initial;
-  font-size: 15px;
-  margin-bottom: 15px;
-  margin-top: 5px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 0px;
 }
 #SlideContent button {
   position: relative;
@@ -137,49 +137,79 @@ header {
 
 #SlideVideo {
   position: absolute;
-  right: 120px;
-  width: 500px;
-  height: 260px;
+  width: 90%;
   z-index: 1000;
+  margin-right: 30px;
   border-radius: 2px;
   border: 1px solid #1f1f1f;
+  max-width: 630px;
+}
+
+#SlideGrid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 10;
+}
+
+#SlideSideRight {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#SlideSideLeft {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#BottomGrad {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+  background: linear-gradient(0deg, black 12%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+  bottom: -2px;
 }
 
 #AboutBox {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  height: 400px;
+  height: auto;
   background: black;
-  border-top: 1px solid #272727;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
 }
 
 #ProjectsAboutImagesBox {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  left: 100px;
+  position: relative;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 #ProjectsAboutImagesBox img {
-  position: absolute;
-  width: 250px;
+  position: relative;
+  height: 200px;
   border-radius: 2px;
-}
-#ProjectsAboutImagesBox img:nth-of-type(2) {
-  position: absolute;
-  width: 150px;
-  right: -20px;
-  bottom: 20px;
-  box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.452);
-  overflow: hidden;
+  box-sizing: border-box;
 }
 
 #AboutHomeContent {
-  position: absolute;
-  right: 10%;
+  position: relative;
   width: auto;
   height: auto;
   display: flex;
@@ -187,13 +217,14 @@ header {
   align-items: left;
   flex-direction: column;
   z-index: 1000;
+  padding: 30px;
 }
 #AboutHomeContent span {
   position: relative;
   font-family: arial;
   color: white;
   font-weight: bold;
-  font-size: 55px;
+  font-size: 60px;
   margin: 0px;
   margin-bottom: 0px;
 }
@@ -206,58 +237,32 @@ header {
   margin-top: 0px;
 }
 
-.CrossStick1 {
-  position: absolute;
-  width: 70px;
-  right: 70px;
-  top: 70px;
-}
-
-.CrossStick2 {
-  position: absolute;
-  width: 40px;
-  right: 170px;
-  top: 70px;
-}
-
-.CrossStick3 {
-  position: absolute;
-  width: 20px;
-  right: 120px;
-  bottom: 70px;
-}
-
-.CrossStick4 {
-  position: absolute;
-  width: 30px;
-  bottom: 80px;
-  right: 800px;
-}
-
 #CommunityBox {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  height: 800px;
+  height: auto;
   background: white;
-  border-top: 1px solid #272727;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  border-bottom: 1px solid #ececec;
 }
 
 .Wave01 {
-  position: absolute;
+  position: relative;
   width: 100%;
   box-sizing: border-box;
   top: -2px;
+  display: none;
 }
 
 #CommunityContent {
-  position: absolute;
-  left: 100px;
+  position: relative;
   width: auto;
-  top: 480px;
   height: auto;
   display: flex;
   justify-content: flex-start;
@@ -270,7 +275,7 @@ header {
   font-family: arial;
   color: black;
   font-weight: bold;
-  font-size: 65px;
+  font-size: 61px;
   margin: 0px;
   margin-bottom: 0px;
 }
@@ -309,68 +314,71 @@ header {
 }
 
 .GamersIllustration {
-  position: absolute;
-  right: 100px;
+  position: relative;
   width: 440px;
-  top: 330px;
+  margin: 20px;
 }
 
 #ProjectsBox {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  height: 700px;
+  height: auto;
   background: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: center;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+#DemosBox {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  background: #ebebeb;
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-#ProSide1 {
-  position: relative;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-#ProSide1 .SideUp {
-  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-#ProSide1 .SideDown {
+#DemosBox iframe {
+  padding: 10px;
+}
+#DemosBox div {
+  border: 1px solid red;
+}
+
+#SolutionsInformations {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#ProSide1 .img01 {
-  position: absolute;
-  width: 90%;
-  border-radius: 5px;
-  border: 2px solid #9900e0;
-  max-width: 630px;
-  filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.226));
-}
-#ProSide1 #ImageContent01 {
-  position: absolute;
   width: 80%;
   height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: left;
   flex-direction: column;
+  margin: 20px;
 }
-#ProSide1 #ImageContent01 span {
+#SolutionsInformations span {
   position: relative;
   font-family: arial;
   font-size: 24px;
   font-weight: bold;
   color: #9900e0;
 }
-#ProSide1 #ImageContent01 span:nth-of-type(2) {
+#SolutionsInformations span:nth-of-type(2) {
   font-size: 19px;
   color: black;
   margin-top: 5px;
 }
-#ProSide1 #ImageContent01 p {
+#SolutionsInformations p {
   position: relative;
   font-family: arial;
   font-size: 25px;
@@ -379,63 +387,7 @@ header {
   border-left: 5px solid #9900e0;
   padding-left: 10px;
 }
-
-#ProSide2 {
-  position: relative;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-#ProSide2 .SideUp {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#ProSide2 .SideDown {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#ProSide2 .img02 {
-  position: absolute;
-  width: 80%;
-  border-radius: 5px;
-  border: 2px solid #9900e0;
-  max-width: 450px;
-  filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.226));
-}
-#ProSide2 #ImageContent02 {
-  position: absolute;
-  width: 80%;
-  height: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: left;
-  flex-direction: column;
-}
-#ProSide2 #ImageContent02 span {
-  position: relative;
-  font-family: arial;
-  font-size: 24px;
-  font-weight: bold;
-  color: #9900e0;
-}
-#ProSide2 #ImageContent02 span:nth-of-type(2) {
-  font-size: 19px;
-  color: black;
-  margin-top: 5px;
-}
-#ProSide2 #ImageContent02 p {
-  position: relative;
-  font-family: arial;
-  font-size: 25px;
-  font-weight: bold;
-  color: black;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-#ProSide2 #ImageContent02 button {
+#SolutionsInformations button {
   position: relative;
   font-family: arial;
   font-size: 17px;
@@ -450,11 +402,11 @@ header {
   margin: 0px;
   border-radius: 3px;
 }
-#ProSide2 #ImageContent02 button:hover {
+#SolutionsInformations button:hover {
   cursor: pointer;
   background: #8800c7;
 }
-#ProSide2 #ImageContent02 button:active {
+#SolutionsInformations button:active {
   background: none;
   border: 1px solid #9900e0;
   color: #9900e0;
@@ -545,8 +497,7 @@ header {
 
 .PoweredByLabel {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  bottom: 23px;
   width: 130px;
 }
 .PoweredByLabel:hover {
@@ -675,9 +626,23 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+@media only screen and (max-width: 1140px) {
+  #CommunityContent {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  #CommunityContent span {
+    font-size: 45px;
+  }
+}
 @media only screen and (max-width: 1100px) {
   #SideSupport {
     display: none;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .SlideBox img {
+    height: 100%;
   }
 }
 @media only screen and (max-width: 734px) {
@@ -695,8 +660,21 @@ footer {
     display: flex;
     bottom: -40px;
   }
+
+  .PoweredByLabel {
+    display: none;
+  }
 }
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 760px) {
+  #SlideGrid {
+    grid-template-columns: 1fr 0px;
+  }
+
+  #SlideSideLeft {
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
   #MenuButton {
     display: flex;
   }
@@ -712,6 +690,11 @@ footer {
 @media only screen and (min-width: 860px) {
   #MobileMenu {
     display: none;
+  }
+}
+@media only screen and (max-width: 670px) {
+  #ProjectsBox {
+    grid-template-rows: 1fr 1fr;
   }
 }
 

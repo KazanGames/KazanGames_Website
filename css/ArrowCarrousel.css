@@ -116,3 +116,15 @@
 .arrow--disabled {
   fill: black;
 }
+
+@media only screen and (max-width: 760px){
+	.arrow--right, .arrow--left{
+    background: rgba(255, 255, 255, 0.11);
+    border: 1px solid white;
+    filter: drop-shadow(2px 2px 4px black);
+  }
+  .arrow{
+    fill: white;
+  }
+	
+}
