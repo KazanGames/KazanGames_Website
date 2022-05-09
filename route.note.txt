@@ -6,3 +6,7 @@ sass sass/global.scss:./css/home.css
 # SASS to CSS WARCH router
 
 sass --watch sass/global.scss:./css/home.css
+
+sass sass/blog.scss/:./css/blog.css
+
+sass --watch sass/blog.scss/:./css/blog.css

@@ -1,0 +1,427 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.76);
+  backdrop-filter: blur(25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#MenuBox {
+  position: absolute;
+  width: auto;
+  height: 35px;
+  right: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#MenuBox a {
+  position: relative;
+  width: auto;
+  height: auto;
+  background: none;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: initial;
+  color: white;
+  border: none;
+  border: none;
+  padding-bottom: 4px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+#MenuBox a:hover {
+  cursor: pointer;
+}
+#BackLogo {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  display: none;
+}
+
+#Logo {
+  position: absolute;
+  left: 200px;
+  width: 110px;
+}
+
+#BlogTitleBox {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: 150px;
+  background: #e4e4e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#BlogTitleBox #BlogTitle {
+  position: absolute;
+  font-family: arial;
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+  left: 100px;
+  top: 30px;
+}
+
+#FeaturesBox {
+  position: relative;
+  width: 300%;
+  box-sizing: border-box;
+  height: 200px;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#FeaturesLeft {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+#FeaturesLeft div {
+  border: 1px solid red;
+}
+
+#FeaturesRight {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#NewFeature {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  z-index: 100;
+  background: red;
+}
+
+#CategoryBox {
+  position: relative;
+  top: 20px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid blue;
+  z-index: 1000;
+}
+
+#SideCopy {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.VulkanIcon {
+  position: absolute;
+  width: 105px;
+  left: 35px;
+  border-right: 1px solid white;
+  padding-right: 15px;
+}
+
+.CopyBox {
+  position: absolute;
+  left: 180px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.CopyBox span {
+  position: relative;
+  font-family: arial;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+}
+.CopyBox span:nth-of-type(2) {
+  font-weight: initial;
+  font-size: 9px;
+}
+.CopyBox span:nth-of-type(3) {
+  font-weight: initial;
+  font-size: 9px;
+}
+
+#SideSupport {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+#SideSupport ul {
+  position: relative;
+  margin-right: 25px;
+}
+#SideSupport ul li:nth-of-type(1) {
+  cursor: default;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+#SideSupport ul li {
+  position: relative;
+  font-family: arial;
+  font-size: 13px;
+  font-weight: initial;
+  color: #c2c2c2;
+  list-style: none;
+  margin-bottom: 2px;
+}
+#SideSupport ul li:hover {
+  cursor: pointer;
+  color: #e6e6e6;
+}
+
+#MenuButton {
+  position: absolute;
+  width: 20px;
+  right: 50px;
+  filter: invert(100);
+  display: none;
+}
+#MenuButton:hover {
+  cursor: pointer;
+}
+
+#MobileMenu {
+  position: fixed;
+  right: -220px;
+  top: 60px;
+  width: 200px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.76);
+  backdrop-filter: blur(25px);
+  z-index: 2000;
+  border-radius: 3px;
+  border: 1px solid #3a3a3a;
+  display: none;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
+  animation: MobMenu 0.4s linear both;
+}
+#MobileMenu a {
+  position: relative;
+  width: auto;
+  height: 30px;
+  background: none;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: initial;
+  color: white;
+  border: none;
+  border: none;
+  padding-bottom: 4px;
+  text-decoration: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 10px;
+}
+#MobileMenu a:active {
+  background: white;
+  color: black;
+}
+
+@keyframes MobMenu {
+  to {
+    right: 10px;
+  }
+}
+#SocialBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+#SocialBox .Social {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border: 2px solid white;
+}
+#SocialBox .Social img {
+  position: absolute;
+  width: 23px;
+}
+#SocialBox .Social:hover {
+  cursor: pointer;
+  background: black;
+  border: 2px solid white;
+}
+#SocialBox .Social:hover img {
+  filter: invert(100);
+}
+
+#MobCopy {
+  position: absolute;
+  bottom: 10px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+#MobCopy span {
+  position: relative;
+  font-family: arial;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+}
+#MobCopy span:nth-of-type(2) {
+  font-weight: 8px;
+  font-weight: initial;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: 200px;
+  background: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#PoweredBy {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  background: #4b4b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#PoweredBy span {
+  position: absolute;
+  font-family: arial;
+  font-size: 10px;
+  font-weight: initial;
+  color: white;
+  right: 10px;
+}
+#PoweredBy span a {
+  font-family: arial;
+  font-size: 14px;
+  font-weight: initial;
+  color: white;
+}
+
+@media only screen and (max-width: 1140px) {
+  #CommunityContent {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  #CommunityContent span {
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  #SideSupport {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .SlideBox img {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 734px) {
+  #SideCopy {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #MobCopy {
+    display: flex;
+    bottom: -40px;
+  }
+
+  .PoweredByLabel {
+    display: none;
+  }
+}
+@media only screen and (max-width: 760px) {
+  #SlideGrid {
+    grid-template-columns: 1fr 0px;
+  }
+
+  #SlideSideLeft {
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #MenuButton {
+    display: flex;
+  }
+
+  #MenuBox {
+    display: none;
+  }
+
+  #Logo {
+    left: 50px;
+  }
+}
+@media only screen and (min-width: 860px) {
+  #MobileMenu {
+    display: none;
+  }
+}
+@media only screen and (max-width: 670px) {
+  #ProjectsBox {
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+/*# sourceMappingURL=blog.css.map */

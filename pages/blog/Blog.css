@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  
+  header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(25px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+  
+  #MenuBox {
+    position: absolute;
+    width: auto;
+    height: 35px;
+    right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #MenuBox a {
+    position: relative;
+    width: auto;
+    height: auto;
+    background: none;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: initial;
+    color: white;
+    border: none;
+    border: none;
+    padding-bottom: 4px;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  #MenuBox a:hover {
+    cursor: pointer;
+  }
+  #BackLogo {
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    display: none;
+  }
+  
+  #Logo {
+    position: absolute;
+    left: 200px;
+    width: 110px;
+  }

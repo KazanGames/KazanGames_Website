@@ -37,7 +37,7 @@ header {
   height: auto;
   background: none;
   font-family: arial;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: initial;
   color: white;
   border: none;
@@ -139,7 +139,7 @@ header {
   position: absolute;
   width: 90%;
   z-index: 1000;
-  margin-right: 30px;
+  margin-right: 100px;
   border-radius: 2px;
   border: 1px solid #1f1f1f;
   max-width: 630px;
@@ -495,15 +495,6 @@ header {
   color: #e6e6e6;
 }
 
-.PoweredByLabel {
-  position: absolute;
-  bottom: 23px;
-  width: 130px;
-}
-.PoweredByLabel:hover {
-  cursor: pointer;
-}
-
 #MenuButton {
   position: absolute;
   width: 20px;
@@ -624,6 +615,31 @@ footer {
   background: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+#PoweredBy {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  background: #4b4b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#PoweredBy span {
+  position: absolute;
+  font-family: arial;
+  font-size: 10px;
+  font-weight: initial;
+  color: white;
+  right: 10px;
+}
+#PoweredBy span a {
+  font-family: arial;
+  font-size: 14px;
+  font-weight: initial;
+  color: white;
 }
 
 @media only screen and (max-width: 1140px) {
